@@ -1,0 +1,26 @@
+<p>
+  Hi, {{name}}
+</p>
+
+<span [hidden]="isReleased">Hidden Information</span>
+
+<br>
+
+<ul *ngFor="let p of person">
+  <li>{{p.fname}}</li>
+  <li>{{p.age}}</li>
+</ul>
+
+<p>male</p>
+<ion-card *ngFor="let p of person">
+  <ion-card-header>
+    <ion-card-title *ngIf="p.gender === 0">{{p.fname}} , {{p.age}} </ion-card-title>
+  </ion-card-header>
+</ion-card>
+
+<p>female</p>
+<ion-card *ngFor="let p of person">
+  <ion-card-header>
+    <ion-card-title *ngIf="p.gender === 1">{{p.fname}} , {{p.age}} </ion-card-title>
+  </ion-card-header>
+</ion-card>
